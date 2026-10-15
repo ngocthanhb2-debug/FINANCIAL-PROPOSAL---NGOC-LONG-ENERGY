@@ -4,10 +4,10 @@
  * - Dữ liệu (hồ sơ, cài đặt, PDF đã gửi) nằm trong bộ nhớ trình duyệt, service worker không đụng tới.
  * Phát hành bản mới chỉ cần thay index.html và tăng nd-version trong đó. Chỉ đổi CACHE khi sửa chính file này.
  */
-const CACHE = 'nl-tragop-v3';
+const CACHE = 'nl-tragop-v4';
 const SCOPE = self.registration.scope;
 const INDEX = SCOPE;
-const CORE = ['manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512-any.png', 'icons/icon-512-maskable.png', 'icons/apple-touch-icon.png'].map(f => new URL(f, SCOPE).href);
+const CORE = ['manifest.webmanifest', 'icon-192.png', 'icon-512-any.png', 'icon-512-maskable.png', 'apple-touch-icon.png'].map(f => new URL(f, SCOPE).href);
 const CDN = ['cdnjs.cloudflare.com', 'fonts.googleapis.com', 'fonts.gstatic.com'];
 const CDN_SAN = [
   'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js',
